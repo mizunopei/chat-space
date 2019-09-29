@@ -7,41 +7,31 @@
 |password|string|null: false|
 ### Association
 - has_many :messages
-- has_many :comments
 - has_many :groups, through: :groups_users
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text||
 |image|text||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :comments
+- belongs_to :group
 
-## commentsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|message_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :user
-- belongs_to :message
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groups_name|string|null: false|
+|name|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :users, through: :groups_users
+- has_many :messages
 
 ## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
