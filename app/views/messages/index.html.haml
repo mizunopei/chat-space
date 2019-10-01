@@ -4,13 +4,21 @@
   
 
   %body
-    .flash-box 
-      .notice 新しいグループが作成されました。
     .wrapper
       .chat-side 
-        .slide-header 
-          .slide-header__box test-user
+        .side-header 
+          .side-header__box 
+            test-user 
+            .side-header__box-icon
+              =fa_icon "edit", class: 'icon'
+              =fa_icon "cog", class: 'icon'
         .groups
+          .group__name test-group
+          .group__text さようなら
+          .group__name sample-group
+          .group__text hello
+          .group__name example
+          .group__text 〜
       .chat-main
       .main-header
         .messages

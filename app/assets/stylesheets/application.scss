@@ -1,0 +1,52 @@
+@import "./reset";
+@import "./variable";
+@import "font-awesome";
+
+body{
+  .wrapper{
+    height: 100vh;
+    .chat-side{
+      width: 300px;
+      .side-header{
+        background-color: #253141;
+        height: 82px;
+        display: flex;
+        align-items: center;
+        .side-header__box{
+          font-weight: bold;
+          font-size: 16px;
+          color: #ffffff;
+          padding-left: 20px;
+          display: flex;
+          .side-header__box-icon{
+            display: flex;
+            margin-left: 130px;
+            align-items: center;
+            .icon{
+              color: white;
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+      .groups{
+        background-color: #2f3e51;
+        height: calc(100vh - 82px);
+        padding: 0 20px;
+          .group__name{
+            font-size: 15px;
+            font-weight: bold;
+            color: #ffffff;
+            padding-top: 20px;
+          }
+          .group__text{
+            font-size: 11px;
+            font-weight: bold;
+            color: #ffffff;
+            padding:5px 0 0 20px;
+          }
+        }
+      }
+    }
+  }
+
