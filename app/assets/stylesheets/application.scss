@@ -54,7 +54,53 @@ body{
       background-color: #fafafa;
       height: 100vh;
       float: right;
-   }
+      .main-header{
+        height: 82px;
+        border-bottom: solid #eeeeee;
+        display: flex;
+        .main-header__text{
+          padding: 35px 0 15px 40px;
+        }
+        .btn-edit{
+          height: 40px;
+          border: 1px solid #38AEF0;
+          display: flex;
+          margin: 20px 40px 0 auto;
+          a{
+            color: #38AEF0;
+            background-color: #fafafa;
+            padding: 0 20px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 40px;
+          }
+        }
+      }
+      .messages{
+        .message{
+          padding-top: 6px;
+          .message-user__name{
+            font-weight: bold;
+            font-size: 16px;  
+            color: #434a54;
+            float: left;   
+            padding: 46px 0 10px 40px;
+        }
+        .message__date{
+          font-size: 12px;
+          color: #434a54;
+          float: left;
+          padding: 50px 0 0 10px;
+        }
+        .message-text{
+          clear: both;
+          font-size: 1４px;
+          padding-left: 40px;
+          color: #434a54;
+        }
+       }
+      }
+    }
   }
 }
 
