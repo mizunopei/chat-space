@@ -4,24 +4,22 @@
 
 body{
   .wrapper{
-    height: 100vh;
-    width: 100vw;
+    @include area(100vh, 100vw);
     .chat-side{
       width: 300px;
-      float: left;
+      float: $float;
       .side-header{
         background-color: #253141;
         height: 82px;
-        display: flex;
+        display: $display;
         align-items: center;
         &__box{
           font-weight: bold;
-          font-size: 16px;
-          color: #ffffff;
+          @include font($side-color,16px);
           padding-left: 20px;
-          display: flex;
+          display: $display;
           &-icon{
-            display: flex;
+            display: $display;
             margin-left: 130px;
             align-items: center;
             .icon{
@@ -34,39 +32,37 @@ body{
       .groups{
         background-color: #2f3e51;
         height: calc(100vh - 82px);
-        padding: 0 20px;
+        @include padding(0 20px);
         .group{
           &__name{
-            font-size: 15px;
-            font-weight: bold;
-            color: #ffffff;
+            @include font($side-color, 15px);
+            font-weight: $font-weight;
             padding-top: 20px;
           }
           &__text{
-            font-size: 11px;
-            font-weight: bold;
-            color: #ffffff;
-            padding:5px 0 0 20px;
+            @include font($side-color, 11px);
+            font-weight: $font-weight;
+            @include padding(5px 0 0 20px);
           }
           }
         }
         }
     .chat-main{
-      width: calc(100% - 300px);
+      @include area(100vh, calc(100% - 300px));
       background-color: #fafafa;
-      height: 100vh;
       float: right;
       .main-header{
         height: 82px;
         border-bottom: solid #eeeeee;
-        display: flex;
+        display: $display;
         &__text{
-          padding: 35px 0 15px 40px;
+          @include padding(35px 0 15px 40px);
+          @include font(#333333, 20px)
         }
         .btn-edit{
           height: 40px;
           border: 1px solid #38AEF0;
-          display: flex;
+          display: $display;
           margin: 20px 40px 0 auto;
           a{
             color: #38AEF0;
@@ -82,23 +78,20 @@ body{
         .message{
           padding-top: 6px;
           &__user-name{
-            font-weight: bold;
-            font-size: 16px;  
-            color: #434a54;
-            float: left;   
-            padding: 46px 0 10px 40px;
+            font-weight: $font-weight;
+            @include font(#434A54, 16px);
+            float: left;
+            @include padding(46px 0 10px 40px);
         }
           &__date{
-          font-size: 12px;
-          color: #434a54;
+          @include font(#434A54, 12px);
           float: left;
-          padding: 50px 0 0 10px;
+          @include padding(50px 0 0 10px);
         }
           &__text{
           clear: both;
-          font-size: 1４px;
+          @include font(#434A54, 14px);
           padding-left: 40px;
-          color: #434a54;
         }
        }
       }
@@ -108,16 +101,15 @@ body{
       background-color: lightgray;
       width: calc(100% - 300px);
       box-sizing: border-box;
-      display: flex;
-      padding: 20px 40px;
+      display: $display;
+      @include padding(20px 40px);
       .message__box{
         position: relative;
         width: 100%;
         margin-right: 15px;
       }
         input[type = "text"]{
-        height: 50px;
-        width: 100%;
+        @include area(50px, 100%);
         padding-left: 10px;
         font-size: 16px;
         margin-right: 10px;
@@ -134,8 +126,7 @@ body{
         input[type = "submit"]{
         background-color: #38AEF0;
         color: #fafafa;
-        height: 50px;
-        width: 120px;
+        @include area(50px, 120px);
         margin-left: 15px;
       }
     }
