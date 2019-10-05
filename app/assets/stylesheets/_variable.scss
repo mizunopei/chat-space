@@ -1,0 +1,18 @@
+$side-color: #ffffff;
+$display: flex;
+$float: left;
+$font-weight: bold;
+
+@mixin area($height, $width){
+  height: $height;
+  width: $width;
+}
+
+@mixin font($color, $font-size){
+  color: $color;
+  font-size: $font-size;
+}
+
+@mixin padding($value){
+  padding: $value
+}
