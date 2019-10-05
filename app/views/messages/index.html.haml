@@ -13,12 +13,13 @@
               =fa_icon "edit", class: 'icon'
               =fa_icon "cog", class: 'icon'
         .groups
-          .group__name test-group
-          .group__text さようなら
-          .group__name sample-group
-          .group__text hello
-          .group__name example
-          .group__text 〜
+          .group
+            .group__name test-group
+            .group__text さようなら
+            .group__name sample-group
+            .group__text hello
+            .group__name example
+            .group__text 〜
       .chat-main
         .main-header
           .main-header__text
@@ -27,20 +28,22 @@
             %a{href:  "#"} Edit
         .messages
           .message
-            .message-user__name
+            .message__user-name
               test-user
             .message__date
               2019/10/01(Tue) 22:00
-            .message-text
+            .message__text
               こんにちは!
-            .message-user__name
+            .message__user-name
               test-user
             .message__date
               2019/10/02(Wed) 22:00
-            .message-text
+            .message__text
               さようなら
-        .form  
-          .type
-            %input{name: "send", placeholder: "type a message", type: "send"}/
-          .btn-send
-            %input{type: "submit", value: "send"}/   
+        .form
+          .message__box
+            %input{name: "message", placeholder: "type a message" , type: "text"}/
+            %label.upload-label{for: "upload-icon"}
+              %i.fa.fa-picture-o 
+              %input{type: "file", id: "upload-icon", style:  "display:none"}
+          %input{type: "submit", value: "Send", style: "line-height:50px; height:50px;"}/

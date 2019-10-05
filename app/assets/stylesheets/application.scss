@@ -14,13 +14,13 @@ body{
         height: 82px;
         display: flex;
         align-items: center;
-        .side-header__box{
+        &__box{
           font-weight: bold;
           font-size: 16px;
           color: #ffffff;
           padding-left: 20px;
           display: flex;
-          .side-header__box-icon{
+          &-icon{
             display: flex;
             margin-left: 130px;
             align-items: center;
@@ -35,20 +35,22 @@ body{
         background-color: #2f3e51;
         height: calc(100vh - 82px);
         padding: 0 20px;
-          .group__name{
+        .group{
+          &__name{
             font-size: 15px;
             font-weight: bold;
             color: #ffffff;
             padding-top: 20px;
           }
-          .group__text{
+          &__text{
             font-size: 11px;
             font-weight: bold;
             color: #ffffff;
             padding:5px 0 0 20px;
           }
+          }
         }
-      }
+        }
     .chat-main{
       width: calc(100% - 300px);
       background-color: #fafafa;
@@ -58,7 +60,7 @@ body{
         height: 82px;
         border-bottom: solid #eeeeee;
         display: flex;
-        .main-header__text{
+        &__text{
           padding: 35px 0 15px 40px;
         }
         .btn-edit{
@@ -79,20 +81,20 @@ body{
       .messages{
         .message{
           padding-top: 6px;
-          .message-user__name{
+          &__user-name{
             font-weight: bold;
             font-size: 16px;  
             color: #434a54;
             float: left;   
             padding: 46px 0 10px 40px;
         }
-        .message__date{
+          &__date{
           font-size: 12px;
           color: #434a54;
           float: left;
           padding: 50px 0 0 10px;
         }
-        .message-text{
+          &__text{
           clear: both;
           font-size: 1４px;
           padding-left: 40px;
@@ -100,6 +102,43 @@ body{
         }
        }
       }
+    .form{
+      bottom: 0;
+      position: absolute;
+      background-color: lightgray;
+      width: calc(100% - 300px);
+      box-sizing: border-box;
+      display: flex;
+      padding: 20px 40px;
+      .message__box{
+        position: relative;
+        width: 100%;
+        margin-right: 15px;
+      }
+        input[type = "text"]{
+        height: 50px;
+        width: 100%;
+        padding-left: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+        input::placeholder {
+        color: #434A54;
+      }
+      .fa{
+        position: absolute;
+        right: 0;
+        bottom: 17px;
+        font-size: larger;
+        }
+        input[type = "submit"]{
+        background-color: #38AEF0;
+        color: #fafafa;
+        height: 50px;
+        width: 120px;
+        margin-left: 15px;
+      }
+    }
     }
   }
 }
