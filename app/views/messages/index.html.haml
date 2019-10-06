@@ -1,19 +1,6 @@
 .wrapper
-  .chat-side 
-    .side-header 
-      .side-header__box 
-        test-user 
-        .side-header__box-icon
-          =fa_icon "edit", class: 'icon'
-          =fa_icon "cog", class: 'icon'
-    .groups
-      .group
-        .group__name test-group
-        .group__text さようなら
-        .group__name sample-group
-        .group__text hello
-        .group__name example
-        .group__text 〜
+  = render partial: "shared/side_bar"
+  
   .chat-main
     .main-header
       .main-header__text
