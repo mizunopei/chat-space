@@ -1,5 +1,8 @@
-@import "./reset";
-@import "./variable";
+@import "reset";
+@import "variable";
+@import "./config/colors";
+@import "user";
+@import "flash";
 @import "font-awesome";
 
 body{
@@ -22,9 +25,12 @@ body{
             display: $display;
             margin-left: 130px;
             align-items: center;
-            .icon{
-              color: white;
-              padding-left: 10px;
+          .list{
+              list-style: none;
+              .icon{
+                color: white;
+                padding-left: 10px;
+              }
             }
           }
         }
