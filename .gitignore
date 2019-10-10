@@ -15,6 +15,10 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+<<<<<<< Updated upstream
 
 carrierwave
 mini_magick
+=======
+public/uploads/*
+>>>>>>> Stashed changes
