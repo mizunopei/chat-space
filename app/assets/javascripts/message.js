@@ -11,7 +11,7 @@ $(function(){
                   </div>
                   <div class = "lower-message">
                       <p class = "lower-message__content" >
-                        ${ message.content} 
+                        ${ message.content}
                       </p>
                       <img class = "lower-message__image" ${ message.image }.url>
                   </div>
@@ -42,6 +42,9 @@ $(function(){
     })
     .fail(function(){
       alert('error');
+    })
+    .always(function(data){
+      $(".form__submit").prop('disabled', false);
     })
   })
 })
