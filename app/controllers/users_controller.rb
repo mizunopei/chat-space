@@ -9,6 +9,13 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+
+  def index
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
   
   private
 
