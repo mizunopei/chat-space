@@ -11,6 +11,7 @@ $(function(){
                       %p.lower-message__content
                         = ${ message.content }
                       = image_tag ${ message.image }.url, class: 'lower-message__image' if message.image.present?`
+    return html;
    }
   $('#new_message').on('submit',function(e){
     e.preventDefault();
