@@ -38,7 +38,6 @@ $(function(){
       var html = buildHTML(data);
       $('.messages').append(html)
       $('.form_message').val('')
-      console.log(html)
       $('.messages').animate({
         scrollTop: $('.messages')[0].scrollHeight
       });
