@@ -12,7 +12,7 @@
           -@group.users.each do|user|
             = user.name
       .right-header
-        %a{href: "#"} Edit
+        %a{href: "/groups/#{@group.id}/edit"} Edit
         .right-header__button
 
 
