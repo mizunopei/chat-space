@@ -9,6 +9,14 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+
+  def index
+    @users = User.where('name LIKE(?) and(id!= ?)', "%#{params[:keyword]}%", "#{current_user.id}").where.not(id: params[:user_ids])
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
   
   private
 

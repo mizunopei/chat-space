@@ -12,7 +12,7 @@
           -@group.users.each do|user|
             = user.name
       .right-header
-        %a{href: "#"} Edit
+        = link_to "Edit", edit_group_path(@group)
         .right-header__button
 
 
