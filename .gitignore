@@ -22,3 +22,5 @@ mini_magick
 =======
 public/uploads/*
 >>>>>>> Stashed changes
+
+config/secrets.yml
